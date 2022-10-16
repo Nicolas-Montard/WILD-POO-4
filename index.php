@@ -1,19 +1,19 @@
 <?php
 
-require_once 'Bicycle.php';
+require_once 'Bike.php';
 require_once 'Car.php';
 require_once 'Truck.php';
+require_once 'Skateboard.php';
+require_once 'MotorWay.php';
+require_once 'PedestrianWay.php';
+require_once 'ResidentialWay.php';
 
-$camion = new Truck(50, 'red', 2, 'fuel');
+$clio = new car('red', 4, 'fuel');
 
-var_dump($camion);
+$skate = new Skateboard('black', 4);
 
-echo $camion->forward() . '<br>';
+$bike = new Bike('red', 2);
 
-echo $camion->brake() . '<br>';
+$autoRoute = new MotorWay();
 
-echo $camion->loadAnalyzer() . '<br>';
-
-$camion->setLoad(50);
-
-echo $camion->loadAnalyzer() . '<br>';
+$autoRoute->addVehicle($clio);
