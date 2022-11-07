@@ -9,11 +9,12 @@ require_once 'PedestrianWay.php';
 require_once 'ResidentialWay.php';
 
 $clio = new car('red', 4, 'fuel');
-
-$skate = new Skateboard('black', 4);
-
-$bike = new Bike('red', 2);
-
-$autoRoute = new MotorWay();
-
-$autoRoute->addVehicle($clio);
+var_dump($clio);
+try {
+echo $clio->start();
+} catch(Exception $e){
+    $clio->setHasParkBrake(false);
+} finally {
+    echo 'Ma voiture roule comme un donut';
+}
+var_dump($clio);
